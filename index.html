@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <style>
+        /*ページ全体の構成*/
+        body{
+            background: #fff;
+            color: #444444;
+            font-size: 10px;
+            font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Helvetica, Arial, 'ＭＳ Ｐゴシック', sans-serif;
+            line-height: 1.42857;
+            margin: 0;
+        }
+        a:link {
+            text-decoration: none;
+        }
+        a:hover {
+            color: #999;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #999;
+            text-decoration: none;
+        }
+        /* ヘッダー */
+        .header {
+            z-index: 100;
+            padding: 24px 0;
+            width: 100%;
+            border-bottom: #ccd1d9 solid 1px;
+            background: #64646c;
+            color: #333;
+        }
+        .header-group{
+            max-width: 960px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header-groupTitle {
+            color:#fff;
+            margin: 0;
+            font-size: 2.4em;
+            padding-right: 20px;
+        }
+        .header-groupDescription {
+            color: #fff;
+        }
+        /*画面サイズ960px以下のヘッダースタイル*/
+        @media screen and (max-width : 960px){
+            .header{
+                padding: 24px 0px;
+            }
+            .header-groupTitle,
+            .header-groupDescription{
+                margin-left: 20px;
+            }
+        }
+        /* ナビゲーション */
+        .section-nav {
+            max-width: 960px;
+            height: auto;
+            margin: 0 auto;
+            padding: 21px 0 0;
+            background: #fff;
+            text-align: center;
+        }
+        .section-navGroup {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        .section-navGroup > li {
+            list-style-type: none;
+        }
+        .section-navGroup > li a {
+            display: block;
+            padding: 6px 12px;
+            color: #333;
+            text-decoration: none;
+        }
+        .section-navGroup > li a:hover {
+            color: #999;
+        }
+        .section-navGroup > li a.active {
+            border-bottom: #333 solid 2px;
+            color: #999;
+        }
+        /*画面サイズ600px以下のナビスタイル*/
+        @media screen and (max-width :960px){
+            .section-navGroup{
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                text-align: center;
+            }
+            .section-navGroup > li{
+                border: 1px solid #ccc;
+                margin-bottom: 5px;
+                min-width: 100%;
+                list-style-type: none;
+            }
+        }
+        /*　スライドイメージ */
+        .mainImg{
+            margin-bottom: 80px;
+        }
+        /*スライドイメージ > スライダーの設定*/
+        .slider{
+        margin: 0 auto 80px;
+        padding: 0;
+        max-width: 960px;
+        height: auto;
+        }
+        .slider img{
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;'; /*IE対策*/
+        }
+        .slick-initialized,
+        .slick-slide{
+            max-height: 500px !important;
+        }
+        .slick-next,
+        .slick-prev{
+            display: none !important;
+        }
+        /*スライダー両サイドの矢印*/
+        .slick-prev:before,
+        .slick-next:before {
+            color: #64646c;
+        }
+        /*画面サイズ600px以下のスライダースタイル*/
+        @media screen and (max-width : 960px){
+            .section{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .mainImg{
+                margin-bottom:0 ;
+            }
+            .slider img{
+                height: 280px;
+                width: 100%;
+                object-fit: cover;
+                font-family: 'object-fit: cover;'; /*IE対策*/
+            }
+        }
+        /*メインコンテンツ*/
+        .article {
+            max-width: 960px;
+            height: auto;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .article-group {
+            width: 31%;
+            margin: 20px 0;
+            height: auto;
+        }
+        .article-group > a{
+            color: #333333;
+        }
+        .article-group > a :hover{
+            color: #999;
+        }
+        /*メインコンテンツのイメージ*/
+        .article-groupImg{
+            width: 100%;
+        }
+        /*メインコンテンツのタイトル部分*/
+        .article-groupTitle {
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 1px dotted #444;
+            text-align: center;
+            font-weight: bold;
+        }
+        /*960px以下の画面の中間概要部分のスタイル*/
+        @media screen and (max-width :960px){
+            .article{
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            .article-group{
+                width: 100%;
+                height:auto;
+            }
+            .article-groupDiscription{
+                text-align: center;
+            }
+        }
+      
+    </style>
+</head>
+
+<body>
+<div class="header">
+<div class="header-group">
+<h1 class="header-groupTitle">ナポステグッズ計算</h1>
+<p class="header-groupDescription">現地販売専用です</p>
+</div>
+</div>
+<!--スライダー-->
+<script>// <![CDATA[
+    $('.slider').slick({
+        autoplay:true,
+        autoplaySpeed:8000,
+        dots:true,
+    });
+    
+// ]]>
+</body>
+</html>
+  	
+
+<html>
+<head>
+<script Language="JavaScript"><!--
+function calc_total()
+{
+	n = 0;
+	fObj = document.myFORM;
+	for (i=0; i<4; i++) if (fObj[i].checked) n += eval(fObj[i].value);
+	for (i=4; i<85; i++) if (fObj[i].checked) n += eval(fObj[i].value); 
+	fObj.result.value = n;
+result=parts+parts2+parts3+parts4+parts5+parts6+parts7+parts8  
+}
+// --></script>
+</head>
+<body>
+<form name="myFORM">
+  <img src="fc2-imageviewer/1/1/file.png" ><br>
+ショッパー（500円）<br>
+  　0個<input type="radio" name="parts" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts" value="500" onClick="calc_total()">　
+  
+<hr style="border: 1px dashed #a260bf;"> 
+  
+    <img src="fc2-imageviewer/1/1/handtaol.png"><br>
+ステッカーセット（800円）<br>
+  　0個<input type="radio" name="parts2" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts2" value="800" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #ffd800;">  
+  
+    <img src="fc2-imageviewer/1/1/facetaol.png"><br>
+Tシャツ／キービジュアル（3800円）<br>
+  　0個<input type="radio" name="parts3" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts3" value="3800" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #4db56a;">  
+  
+      <img src="fc2-imageviewer/1/1/kintyaku.png"><br>
+ムスカリペンライト（3000円）<br>
+  　0個<input type="radio" name="parts4" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts4" value="3000" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #51a8ff;">   
+  
+      <img src="fc2-imageviewer/1/1/t-shirt.png"><br>
+金平糖／ジャック・オ・蘭たん（700円）<br>
+  　0個<input type="radio" name="parts5" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts5" value="700" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #a260bf;">   
+  
+      <img src="fc2-imageviewer/1/1/kusshon.png"><br>
+金平糖／すぎる（700円）<br>
+  　0個<input type="radio" name="parts6" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts6" value="700" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #ffd800;">   
+  
+      <img src="fc2-imageviewer/1/1/keyholder.png"><br>
+金平糖／hacchi（700円）<br>
+  　0個<input type="radio" name="parts7" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts7" value="700" onClick="calc_total()">　
+  
+<hr style="border: 1px dashed #4db56a;">   
+  
+      <img src="fc2-imageviewer/1/1/socks.png"><br>
+金平糖／shu3（700円）<br>
+  　0個<input type="radio" name="parts8" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts8" value="700" onClick="calc_total()">　 
+
+  
+  <hr style="border: 1px dashed #a260bf;">  
+
+合計 <input type="text" name="result">円<br>
+  <br>
+  <br>
+  <br>
+  <font size=2 color=#a9a9a9>画像引用元：<a href= https://napolimen-stage.com/goods/ >https://napolimen-stage.com/goods/ </a><br>
+  (c)ナポリの男たち<br>
+</font>
+</form>
+</body>
+</html>
