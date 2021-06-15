@@ -3,6 +3,18 @@
 <html lang="ja">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick-theme.min.css">
+    <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.js"></script>
+
     <style>
         /*ページ全体の構成*/
         body{
@@ -24,11 +36,6 @@
             color: #999;
             text-decoration: none;
         }
-	    #page {
-	width: 500px;
-	margin: 13.5rem auto 0 auto;
-	padding: 0 1rem;
-		    
         /* ヘッダー */
         .header {
             z-index: 100;
@@ -203,16 +210,15 @@
                 text-align: center;
             }
         }
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-	    
+      
     </style>
 </head>
 
 <body>
 <div class="header">
 <div class="header-group">
-<h1 class="header-groupTitle">ナポステグッズ計算</h1>
-<p class="header-groupDescription">現地販売専用です</p>
+<h1 class="header-groupTitle">なぽだんぶいグッズ計算</h1>
+<p class="header-groupDescription">池袋マルイでの販売会専用です</p>
 </div>
 </div>
 <!--スライダー-->
@@ -223,7 +229,12 @@
         dots:true,
     });
     
-// ]]>
+// ]]></script>
+<!--objedt-fit（IE対策）-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+<script>// <![CDATA[
+objectFitImages();
+// ]]></script>
 </body>
 </html>
   	
@@ -235,69 +246,186 @@ function calc_total()
 {
 	n = 0;
 	fObj = document.myFORM;
-	for (i=0; i<1; i++) if (fObj[i].checked) n += eval(fObj[i].value);
-	for (i=1; i<100; i++) if (fObj[i].checked) n += eval(fObj[i].value); 
+	for (i=0; i<4; i++) if (fObj[i].checked) n += eval(fObj[i].value);
+	for (i=4; i<85; i++) if (fObj[i].checked) n += eval(fObj[i].value); 
 	fObj.result.value = n;
-result=parts+parts2+parts3+parts4+parts5+parts6+parts7+parts8  
+result=parts+parts2+parts3+parts4+parts5+parts6+parts7+parts8 +parts9 +parts10 +parts11 +parts12 +parts13 +parts14 +parts15 +parts16+parts17  
 }
 // --></script>
 </head>
-<body>	
+<body>
 <form name="myFORM">
-  <img src="https://user-images.githubusercontent.com/83646865/121908379-e9a28580-cd67-11eb-91bf-31129357fad4.jpeg" width="150" height="150" ><br>
-ショッパー（500円）<br>
+  <img src="fc2-imageviewer/1/1/file.png" ><br>
+クリアファイル（440円）<br>
   　0個<input type="radio" name="parts" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts" value="500" onClick="calc_total()">　
+    　1<input type="radio" name="parts" value="440" onClick="calc_total()">　 
+    　2<input type="radio" name="parts" value="440*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts" value="440*3" onClick="calc_total()">　  
+        　4<input type="radio" name="parts" value="440*4" onClick="calc_total()">　  
   
 <hr style="border: 1px dashed #a260bf;"> 
   
-    <img src="https://user-images.githubusercontent.com/83646865/121908530-1060bc00-cd68-11eb-8156-e6282a711cf9.jpeg" width="150" height="150"><br>
-ステッカーセット（800円）<br>
+    <img src="fc2-imageviewer/1/1/handtaol.png"><br>
+ハンドタオル（880円）<br>
   　0個<input type="radio" name="parts2" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts2" value="800" onClick="calc_total()">　 
+    　1<input type="radio" name="parts2" value="880" onClick="calc_total()">　 
+    　2<input type="radio" name="parts2" value="880*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts2" value="880*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts2" value="880*4" onClick="calc_total()" >
   
 <hr style="border: 1px dashed #ffd800;">  
   
-    <img src="https://user-images.githubusercontent.com/83646865/121913433-5c156480-cd6c-11eb-8cba-2054b6f1a951.jpeg" width="150" height="150"><br>
-Tシャツ／キービジュアル（3800円）<br>
+    <img src="fc2-imageviewer/1/1/facetaol.png"><br>
+フェイスタオル（1980円）<br>
   　0個<input type="radio" name="parts3" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts3" value="3800" onClick="calc_total()">　 
+    　1<input type="radio" name="parts3" value="1980" onClick="calc_total()">　 
   
 <hr style="border: 1px dashed #4db56a;">  
   
-      <img src="https://user-images.githubusercontent.com/83646865/121913475-646d9f80-cd6c-11eb-9465-80064573331e.jpeg" width="150" height="150">
-	<img src=https://user-images.githubusercontent.com/83646865/121908604-20789b80-cd68-11eb-8561-ca577e530a5a.jpeg width="150" height="150"><br>
-ムスカリペンライト（3000円）<br>
+      <img src="fc2-imageviewer/1/1/kintyaku.png"><br>
+巾着入りお菓子（1650円）<br>
   　0個<input type="radio" name="parts4" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts4" value="3000" onClick="calc_total()">　 
+    　1<input type="radio" name="parts4" value="1650" onClick="calc_total()">　 
+    　2<input type="radio" name="parts4" value="1650*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts4" value="1650*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts4" value="1650*4" onClick="calc_total()" >
   
 <hr style="border: 1px dashed #51a8ff;">   
   
-      <img src="https://user-images.githubusercontent.com/83646865/121908646-28d0d680-cd68-11eb-9cb8-f27968be5541.jpeg" width="150" height="150"><br>
-金平糖／ジャック・オ・蘭たん（700円）<br>
+      <img src="fc2-imageviewer/1/1/t-shirt.png"><br>
+Tシャツ（4180円）<br>
   　0個<input type="radio" name="parts5" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts5" value="700" onClick="calc_total()">　 
+    　1<input type="radio" name="parts5" value="4180" onClick="calc_total()">　 
+    　2<input type="radio" name="parts5" value="4180*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts5" value="4180*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts5" value="4180*4" onClick="calc_total()" >
   
 <hr style="border: 1px dashed #a260bf;">   
   
-      <img src="https://user-images.githubusercontent.com/83646865/121908761-42721e00-cd68-11eb-8374-4b22c1a6973c.jpeg" width="150" height="150"><br>
-金平糖／すぎる（700円）<br>
+      <img src="fc2-imageviewer/1/1/kusshon.png"><br>
+クッション（3850円）<br>
   　0個<input type="radio" name="parts6" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts6" value="700" onClick="calc_total()">　 
+    　1<input type="radio" name="parts6" value="3850" onClick="calc_total()">　 
   
 <hr style="border: 1px dashed #ffd800;">   
   
-      <img src="https://user-images.githubusercontent.com/83646865/121908799-4a31c280-cd68-11eb-9433-db15894b1094.jpeg" width="150" height="150"><br>
-金平糖／hacchi（700円）<br>
+      <img src="fc2-imageviewer/1/1/keyholder.png"><br>
+アクリルキーホルダーコレクション（660円）<br>
   　0個<input type="radio" name="parts7" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts7" value="700" onClick="calc_total()">　
+    　1<input type="radio" name="parts7" value="660" onClick="calc_total()">　 
+    　2<input type="radio" name="parts7" value="660*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts7" value="660*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts7" value="660*4" onClick="calc_total()" ><br>
+          　5個<input type="radio" name="parts7" value="660*5" onClick="calc_total()" > 
   
 <hr style="border: 1px dashed #4db56a;">   
   
-      <img src="https://user-images.githubusercontent.com/83646865/121908812-4dc54980-cd68-11eb-8b3b-7bc5f8d453ae.jpeg" width="150" height="150"><br>
-金平糖／shu3（700円）<br>
+      <img src="fc2-imageviewer/1/1/socks.png"><br>
+靴下（880円）<br>
   　0個<input type="radio" name="parts8" value="0" onClick="calc_total()" /checked>　
-    　1<input type="radio" name="parts8" value="700" onClick="calc_total()">　 
+    　1<input type="radio" name="parts8" value="880" onClick="calc_total()">　 
+    　2<input type="radio" name="parts8" value="880*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts8" value="880*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts8" value="880*4" onClick="calc_total()" >
+  
+<hr style="border: 1px dashed #51a8ff;">   
+  
+      <img src="fc2-imageviewer/1/1/tape.png"><br>
+マスキングテープ（440円）<br>
+  　0個<input type="radio" name="parts9" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts9" value="440" onClick="calc_total()">　 
+    　2<input type="radio" name="parts9" value="440*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts9" value="440*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts9" value="440*4" onClick="calc_total()" >
+  
+<hr style="border: 1px dashed #a260bf;">   
+  
+      <img src="fc2-imageviewer/1/1/ecobag.png"><br>
+エコバッグ（1650円）<br>
+  　0個<input type="radio" name="parts10" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts10" value="1650" onClick="calc_total()">　 
+    　2<input type="radio" name="parts10" value="1650*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts10" value="1650*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts10" value="1650*4" onClick="calc_total()" >
+  
+<hr style="border: 1px dashed #ffd800;">   
+  
+      <img src="fc2-imageviewer/1/1/name.png"><br>
+おなまえラバーストラップ（880円）<br>
+  　0個<input type="radio" name="parts11" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts11" value="880" onClick="calc_total()">　 
+    　2<input type="radio" name="parts11" value="880*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts11" value="880*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts11" value="880*4" onClick="calc_total()" >
+  
+<hr style="border: 1px dashed #4db56a;">   
+  
+      <img src="fc2-imageviewer/1/1/mag.png"><br>
+グラスマグセット（2530円）<br>
+  　0個<input type="radio" name="parts12" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts12" value="2530" onClick="calc_total()">　 
+    　2<input type="radio" name="parts12" value="2530*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts12" value="2530*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts12" value="2530*4" onClick="calc_total()" >
+  
+<hr style="border: 1px dashed #51a8ff;">   
+  
+      <img src="fc2-imageviewer/1/1/freakseal.png"><br>
+フレークシール（660円）<br>
+  　0個<input type="radio" name="parts13" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts13" value="660" onClick="calc_total()">　 
+  
+<hr style="border: 1px dashed #a260bf;">   
+  
+      <img src="fc2-imageviewer/1/1/rabamasu.png"><br>
+ラバーマスコットコレクション（990円）<br>
+  　0個<input type="radio" name="parts14" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts14" value="990" onClick="calc_total()">　 
+    　2<input type="radio" name="parts14" value="990*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts14" value="990*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts14" value="990*4" onClick="calc_total()" ><br>
+          　5個<input type="radio" name="parts14" value="990*5" onClick="calc_total()" > 
+  
+<hr style="border: 1px dashed #ffd800;">   
+  
+      <img src="fc2-imageviewer/1/1/sticker.png"><br>
+ステッカーコレクション（220円）<br>
+  　0個<input type="radio" name="parts15" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts15" value="220" onClick="calc_total()">　 
+    　2<input type="radio" name="parts15" value="220*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts15" value="220*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts15" value="220*4" onClick="calc_total()" ><br>
+          　5個<input type="radio" name="parts15" value="220*5" onClick="calc_total()" > 
+  
+<hr style="border: 1px dashed #4db56a;">   
+  
+      <img src="fc2-imageviewer/1/1/nuikeyholder.png"><br>
+ぬいぐるみキーホルダー（1650円）<br>
+  　0個<input type="radio" name="parts16" value="0" onClick="calc_total()" /checked>　
+    　1<input type="radio" name="parts16" value="1650" onClick="calc_total()">　 
+    　2<input type="radio" name="parts16" value="1650*2" onClick="calc_total()">　 
+      　3<input type="radio" name="parts16" value="1650*3" onClick="calc_total()" >　  
+        　4<input type="radio" name="parts16" value="1650*4" onClick="calc_total()" ><br>
+    　5個<input type="radio" name="parts16" value="1650*5" onClick="calc_total()">　
+    　6<input type="radio" name="parts16" value="1650*6" onClick="calc_total()">　 
+    　7<input type="radio" name="parts16" value="1650*7" onClick="calc_total()">　 
+      　8<input type="radio" name="parts16" value="1650*8" onClick="calc_total()" >　  
+        　9<input type="radio" name="parts16" value="1650*9" onClick="calc_total()" ><br> 
+        　10個<input type="radio" name="parts16" value="1650*10" onClick="calc_total()" >　 
+  
+<hr style="border: 1px dashed #51a8ff;">   
+  <br>
+  マルイの紙袋<br>（全て上限いっぱいまで購入の場合=100%。<br>　
+  適当にグッズ購入の際の目安としてください）<br>
+  　<input type="radio" name="parts17" value="0" onClick="calc_total()" /checked>なし <br>
+    　<input type="radio" name="parts17" value="22" onClick="calc_total()">S（22円：グッズ購入〜25％） <br> 
+    　<input type="radio" name="parts17" value="33" onClick="calc_total()">M（33円：グッズ購入〜50％） <br>　
+     <input type="radio" name="parts17" value="55" onClick="calc_total()" >L（55円：グッズ購入〜75％）  <br>　
+     <input type="radio" name="parts17" value="22*4" onClick="calc_total()" >LL（88円：グッズ購入〜100％）  <br>  
+※一番大きいグッズはクッション。<br>
+   　Lサイズが必要です
+  <br>
+  <br>
 
   
   <hr style="border: 1px dashed #a260bf;">  
@@ -306,9 +434,9 @@ Tシャツ／キービジュアル（3800円）<br>
   <br>
   <br>
   <br>
-  <font size=2 color=#a9a9a9>画像引用元：<a href= https://napolimen-stage.com/goods/ >https://napolimen-stage.com/goods/ </a><br>
+  <font size=2 color=#a9a9a9>画像引用元：<a href= https://twitter.com/napolimens/status/1305437616037228545?s=20 ><br> https://twitter.com/napolimens/status/<br>1305437616037228545?s=20 </a><br>
   (c)ナポリの男たち<br>
-</font>
+  (c)サンリオ</font>
 </form>
 </body>
 </html>
