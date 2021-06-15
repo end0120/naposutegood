@@ -242,16 +242,18 @@ objectFitImages();
 <html>
 <head>
 <script Language="JavaScript"><!--
-function calc_total()
-{
-	n = 0;
-	fObj = document.myFORM;
-	for (i=0; i<4; i++) if (fObj[i].checked) n += eval(fObj[i].value);
-	for (i=4; i<85; i++) if (fObj[i].checked) n += eval(fObj[i].value); 
-	fObj.result.value = n;
-result=parts+parts2+parts3+parts4+parts5+parts6+parts7+parts8  
+<!--
+function calc_total(){
+  result = 0;
+  for (i=0; i<document.myform.length-1; i++){
+    if (document.myform.elements[i].checked){
+      result += eval(document.myform.elements[i].value);
+    }
+  }
+  document.myform.result.value = result
 }
-// --></script>
+//-->
+</script>
 </head>
 <body>
 <form name="myFORM">
